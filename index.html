@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora Cedric Macz</title>
+
+    <!-- Icono -->
+    <link rel="icon" href="logo.png">
+
+    <style>
+        html, body{ 
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header{
+            background-color: rgb(47, 79, 52);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav{
+            background-color: #2e5c3a;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a{
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover{
+            text-decoration: underline;
+        }
+
+        main{
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        /* TARJETAS */
+        section{
+            background: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+
+            /* zoom suave */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover{
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0px 8px 15px rgba(0,0,0,0.2);
+        }
+
+        h2{
+            color: rgb(47, 79, 52);
+        }
+
+        footer{
+            background-color: rgb(47, 79, 52);
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        img{
+            margin-top: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        img:hover{
+            transform: scale(1.1);
+        }
+
+        /* ANIMACIÓN SCROLL */
+        .animar{
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.6s ease;
+        }
+
+        .animar.visible{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Bitácora - Cedric Macz</h1>
+        <p>Segunda y Tercera Unidad</p>
+    </header>
+
+    <nav>
+        <a href="#unidad2">Segunda Unidad</a>
+        <a href="#unidad3">Tercera Unidad</a>
+    </nav>
+
+    <main>
+
+        <section id="unidad2" class="animar">
+            <h2>Segunda Unidad</h2>
+            <p>
+                En esta unidad aprendí sobre HTML, su estructura y cómo crear páginas web básicas.
+                También practiqué etiquetas y organización de contenido.
+            </p>
+        </section>
+
+        <section id="unidad3" class="animar">
+            <h2>Tercera Unidad</h2>
+            <p>
+                En esta unidad aprendí CSS, mejorando el diseño de las páginas con colores, sombras
+                y estilos más profesionales.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Instituto Capouilliez</p>
+        <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" height="50">
+    </footer>
+
+    <!-- ANIMACIÓN AL SCROLL -->
+    <script>
+        const elementos = document.querySelectorAll('.animar');
+
+        function mostrarElementos() {
+            const alturaPantalla = window.innerHeight;
+
+            elementos.forEach(el => {
+                const distancia = el.getBoundingClientRect().top;
+
+                if (distancia < alturaPantalla - 100) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', mostrarElementos);
+        mostrarElementos();
+    </script>
+
+</body>
+</html>
