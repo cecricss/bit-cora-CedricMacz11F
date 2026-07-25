@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitácora Cedric Macz</title>
+    <title>Bitácora Cedric Macz - Robótica</title>
 
-    <!-- Icono -->
     <link rel="icon" href="logo.png">
 
     <style>
@@ -26,13 +25,16 @@
             background-color: #2e5c3a;
             padding: 10px;
             text-align: center;
+            overflow-x: auto;
+            white-space: nowrap;
         }
 
         nav a{
             color: white;
-            margin: 0 15px;
+            margin: 0 10px;
             text-decoration: none;
             font-weight: bold;
+            display: inline-block;
         }
 
         nav a:hover{
@@ -48,22 +50,24 @@
         /* TARJETAS */
         section{
             background: white;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
 
             /* zoom suave */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
         }
 
         section:hover{
-            transform: scale(1.05) translateY(-5px);
+            transform: scale(1.02) translateY(-5px);
             box-shadow: 0px 8px 15px rgba(0,0,0,0.2);
         }
 
         h2{
             color: rgb(47, 79, 52);
+            margin-top: 0;
         }
 
         footer{
@@ -73,13 +77,15 @@
             padding: 15px;
         }
 
-        img{
+        img, video, iframe {
             margin-top: 10px;
+            border-radius: 8px;
+            max-width: 100%;
             transition: transform 0.3s ease;
         }
 
-        img:hover{
-            transform: scale(1.1);
+        img:hover, video:hover {
+            transform: scale(1.02);
         }
 
         /* ANIMACIÓN SCROLL */
@@ -100,40 +106,84 @@
 
     <header>
         <h1>Bitácora - Cedric Macz</h1>
-        <p>Segunda y Tercera Unidad</p>
+        <p>Introducción a la Robótica</p>
     </header>
 
     <nav>
-        <a href="#unidad2">Segunda Unidad</a>
-        <a href="#unidad3">Tercera Unidad</a>
+        <a href="#semana1">Semana 1</a>
+        <a href="#semana2">Semana 2</a>
+        <a href="#semana3">Semana 3</a>
+        <a href="#semana4">Semana 4</a>
+        <a href="#semana5">Semana 5</a>
+        <a href="#semana6">Semana 6</a>
+        <a href="#semana7">Semana 7</a>
     </nav>
 
     <main>
 
-        <section id="unidad2" class="animar">
-            <h2>Segunda Unidad</h2>
-            <p>
-                En esta unidad aprendí sobre HTML, su estructura y cómo crear páginas web básicas.
-                También practiqué etiquetas y organización de contenido.
-            </p>
+        <section id="semana1" class="animar">
+            <h2>Semana 1: Introducción al Arduino</h2>
+            <iframe src="Recursos/IntroduccionArduino.pdf" width="100%" height="500px" style="border: none;"></iframe>
         </section>
 
-        <section id="unidad3" class="animar">
-            <h2>Tercera Unidad</h2>
-            <p>
-                En esta unidad aprendí CSS, mejorando el diseño de las páginas con colores, sombras
-                y estilos más profesionales.
-            </p>
+        <section id="semana2" class="animar">
+            <h2>Semana 2: Desarrollo de Proyectos</h2>
+            <p>Video demostrativo de la segunda semana:</p>
+            <video width="90%" controls>
+                <source src="Recursos/semana2.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </section>
+
+        <section id="semana3" class="animar">
+            <h2>Semana 3: Conceptos Avanzados</h2>
+            <p>Video demostrativo de la tercera semana:</p>
+            <video width="90%" controls>
+                <source src="Recursos/semana3.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </section>
+
+        <section id="semana4" class="animar">
+            <h2>Semana 4: Sensores y Actuadores</h2>
+            <p>Video demostrativo de la cuarta semana:</p>
+            <video width="90%" controls>
+                <source src="Recursos/semana4.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </section>
+
+        <section id="semana5" class="animar">
+            <h2>Semana 5: Elaboración de Circuito</h2>
+            <p>Fotografía del circuito ensamblado:</p>
+            <img src="Recursos/Semana 5 foto.jpeg" alt="Foto del circuito Semana 5" style="width: 90%;">
+        </section>
+
+        <section id="semana6" class="animar">
+            <h2>Semana 6: Avances de Robótica</h2>
+            <p>Video del proyecto Semáforo:</p>
+            <video width="90%" controls>
+                <source src="Recursos/SEMAFORO PH.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </section>
+
+        <section id="semana7" class="animar">
+            <h2>Semana 7: Grabación de Circuito</h2>
+            <p>Muestra final del funcionamiento del circuito:</p>
+            <video width="90%" controls>
+                <source src="Recursos/videotics.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
         </section>
 
     </main>
 
     <footer>
         <p>Instituto Capouilliez</p>
-        <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" height="50">
+        <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" height="50" alt="Logo Capouilliez">
     </footer>
 
-    <!-- ANIMACIÓN AL SCROLL -->
     <script>
         const elementos = document.querySelectorAll('.animar');
 
